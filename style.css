@@ -1,0 +1,24 @@
+body {
+    padding : 30px;
+    text-align : center;
+    background-color :#f4f4f4f4;
+    font-family : Arial, sans-serif;
+
+}
+.container {
+    max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input, button {
+    padding: 10px;
+    margin: 10px 5px;
+    font-size: 16px;
+  }
+  #profile, #repos {
+    margin-top: 20px;
+  }
+  
