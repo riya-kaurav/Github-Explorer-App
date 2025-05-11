@@ -1,7 +1,7 @@
 body {
     padding : 30px;
     text-align : center;
-    background-color :#f4f4f4f4;
+    background-color :#cfd8d8f4;
     font-family : Arial, sans-serif;
 
 }
@@ -22,3 +22,20 @@ input, button {
     margin-top: 20px;
   }
   
+  .repos {
+    border-bottom : 1px solid #ccc;
+    padding : 10px 0;
+    text-align : left;
+  }
+
+  .repos a {
+    text-decoration : none;
+    color : #007bff;
+  }
+  .repos a:hover {
+    text-decoration :underline;
+  }
+
+  repos span {
+    color : #555;
+  }
