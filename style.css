@@ -1,41 +1,157 @@
+
 body {
-    padding : 30px;
-    text-align : center;
-    background-color :#cfd8d8f4;
-    font-family : Arial, sans-serif;
-
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f1f7f3;
 }
-.container {
-    max-width: 600px;
-  margin: auto;
-  background: white;
+body {
+  background: #f4f4f4;
+  color : #333;
+}
+button {
+  background-color: #fff;
+  color:#333;
+}
+
+#profile , #repos {
+  background-color: #fff;
+  color:#333;
+}
+
+
+body.dark {
+  background: #333;
+  color: #fff;
+}
+
+body.dark button {
+  background-color: #555;
+}
+
+body.dark #profile , body.dark #repos {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark .repos a {
+  color: #64b5f6;
+}
+
+body.dark .repos a:hover {
+  text-decoration :underline;
+}
+
+#themeToggle {
+  background-color :#333;
+  color: #fff;
+  border : 1px solid #555;
+}
+
+body.dark #themeToggle {
+  background-color: #555;
+  color: #fff;
+}
+
+
+#profile, #repos {
+  background-color: #fff;
+  border-radius: 8px;
   padding: 20px;
-  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
 }
 
-input, button {
+input[type="text"], button {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px 0;
+  border-radius: 4px;
+  border: 1px solid #5e79a3;
+  width: 100%;
+}
+
+button {
+  background-color: #346396;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input[type="text"] {
+  width: calc(100% - 20px); 
+}
+
+.repo a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.repo a:hover {
+  text-decoration: underline;
+}
+
+.repo span {
+  color: #555;
+  font-size: 14px;
+}
+
+/* Mobile Design */
+@media (max-width: 600px) {
+  body {
     padding: 10px;
-    margin: 10px 5px;
-    font-size: 16px;
+    flex-direction: column;
   }
+
   #profile, #repos {
-    margin-top: 20px;
-  }
-  
-  .repos {
-    border-bottom : 1px solid #ccc;
-    padding : 10px 0;
-    text-align : left;
+    width: 100%;
+    margin: 0;
   }
 
-  .repos a {
-    text-decoration : none;
-    color : #007bff;
-  }
-  .repos a:hover {
-    text-decoration :underline;
+  input[type="text"], button {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px;
   }
 
-  repos span {
-    color : #555;
+  .repo {
+    font-size: 14px;
+    padding: 8px;
   }
+}
+
+/* Animation for Profile */
+#profile {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+#repos {
+  opacity: 0;
+  animation: fadeIn 1s 0.5s forwards; /* Delay animation for repos */
+}
+
+.repo {
+  transition: transform 0.3s ease-in-out;
+}
+
+.repo:hover {
+  transform: scale(1.05);
+}
