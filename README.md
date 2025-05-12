@@ -21,3 +21,7 @@ This is a simple web application that allows users to search for GitHub profiles
 - CSS
 - JavaScript
 - GitHub API
+
+- ## Live Demo
+
+- Click here to view the live project :- https://riya-kaurav.github.io/Github-Explorer-App/
