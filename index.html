@@ -1,23 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Github Explorer App</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GitHub Profile Explorer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class = "container">
-        <h1>Github Profile Explorer</h1>
-        <input type ="text" id ="username" placeholder ="Enter github username"/>
-        <button id="searchBtn">Search</button>
-        <button id ="themeToggle">Toggle Dark Mode </button>
-        <div id="profile"></div>
-        <div id="repos"></div>
+  <div class="container">
+    <h1 class="animated-header">GitHub Profile Explorer</h1>
+
+    <div class="search-bar">
+      <input
+        type="text"
+        id="username"
+        placeholder="Enter GitHub username"
+        autocomplete="off"
+      />
+      <button id="searchBtn">Search</button>
+      
+      <div id="suggestions" class="suggestions-dropdown"></div>
     </div>
 
+    <div class="tabs">
+      <button data-tab="profile" class="active">Profile</button>
+      <button data-tab="reposPanel">Repositories</button>
+    </div>
 
-    <script src ="index.js"></script>
+    <div id="tab-content">
+      <section id="profile" class="tab-panel"></section>
 
+      <section id="reposPanel" class="tab-panel hidden">
+        <div class="repo-controls">
+          <select id="filterLang">
+                        <option value="">All languages</option>
+          </select>
+          <button id="sortStars">Sort by Stars</button>
+        </div>
+        <div id="repos"></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
 </body>
 </html>
