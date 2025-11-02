@@ -2,8 +2,7 @@
 
 This is a simple web application that allows users to search for GitHub profiles and display user information and repositories. It uses the GitHub API to fetch data.
 
- ## Click here to view the live project :-
-https://riya-kaurav.github.io/Github-Explorer-App/
+
 
 
 ## Features
